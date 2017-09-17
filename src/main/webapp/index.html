@@ -46,7 +46,12 @@
     
     <!-- Load the services we have defined for the application, particularly the REST services -->
     <script src="js/services.js"></script>
-    
+<style>
+.g-item{
+    width: 200px;
+    height: 300px;
+} 
+</style>
 </head>
 <body>
     <section id="container" class="container">
@@ -71,10 +76,15 @@
                 </ul>
             </div>
 	    <div class="row">
-		 <div class="span4">
-		 <img src="gfx/oia-meap-book-cover.png" class="rounded" alt="...">
-		</div>
-	    </div>
+   <div class="col-md-4 col-ms-6">
+      <div class="g-item"">
+            <img clas="img-responsive" src="gfx/oia-meap-book-cover.png" alt="">
+            <a data-rel="lightbox" class="overlay" href="">
+                <span>+</span>
+            </a>
+      </div> <!-- /.g-item -->
+   </div> <!-- /.col-md-4 -->
+</div> <!--
         </aside>
         <footer id="footer">
             <p>
