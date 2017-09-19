@@ -1,0 +1,5 @@
+/home/josborne/code/git/wildfly-kitchensink-angular-bootstrap/src/main/java/org/jboss/as/quickstarts/kitchensink/data/MemberList.java
+/home/josborne/code/git/wildfly-kitchensink-angular-bootstrap/src/main/java/org/jboss/as/quickstarts/kitchensink/model/Member.java
+/home/josborne/code/git/wildfly-kitchensink-angular-bootstrap/src/main/java/org/jboss/as/quickstarts/kitchensink/rest/MemberResourceRESTService.java
+/home/josborne/code/git/wildfly-kitchensink-angular-bootstrap/src/main/java/org/jboss/as/quickstarts/kitchensink/rest/JaxRsActivator.java
+/home/josborne/code/git/wildfly-kitchensink-angular-bootstrap/src/main/java/org/jboss/as/quickstarts/kitchensink/util/Resources.java
