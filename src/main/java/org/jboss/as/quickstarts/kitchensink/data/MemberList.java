@@ -50,6 +50,7 @@ public class MemberList {
     }
 
     public List<Member> retrieveAllMembersOrderedByName() {
+        log.info("Sorting members by name...");
         Collections.sort(members);
         return members;
     }
