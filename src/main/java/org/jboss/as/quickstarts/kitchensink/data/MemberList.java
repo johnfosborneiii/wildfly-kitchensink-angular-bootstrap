@@ -16,7 +16,6 @@
  */
 package org.jboss.as.quickstarts.kitchensink.data;
 
-import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.event.Observes;
 import javax.enterprise.event.Reception;
@@ -50,7 +49,6 @@ public class MemberList {
         retrieveAllMembersOrderedByName();
     }
 
-    @PostConstruct
     public List<Member> retrieveAllMembersOrderedByName() {
         Collections.sort(members);
         return members;
