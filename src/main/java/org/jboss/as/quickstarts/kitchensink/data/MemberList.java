@@ -37,10 +37,6 @@ public class MemberList {
 
     private List<Member> members = new ArrayList<Member>();
 
-    // @Named provides access the return value via the EL variable name "members" in the UI (e.g.
-    // Facelets or JSP view)
-    @Produces
-    @Named
     public List<Member> getMembers() {
         return members;
     }
