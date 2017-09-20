@@ -29,8 +29,9 @@ import java.util.Collections;
 
 import org.jboss.as.quickstarts.kitchensink.model.Member;
 
+@Named("MemberList")
 @SessionScoped
-public class MemberList {
+public class MemberList implements Serializable{
 
     @Inject
     private Logger log;
