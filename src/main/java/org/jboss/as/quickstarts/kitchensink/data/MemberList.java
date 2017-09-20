@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 import java.util.Collections;
+import java.io.Serializable;
 
 import org.jboss.as.quickstarts.kitchensink.model.Member;
 
