@@ -44,11 +44,14 @@ public class MemberList implements Serializable{
     }
 
     public void onMemberListChanged(@Observes(notifyObserver = Reception.IF_EXISTS) final Member member) {
+
+        log.info("onMemberListChanged...");
         retrieveAllMembersOrderedByName();
     }
 
     public List<Member> retrieveAllMembersOrderedByName() {
         log.info("Sorting members by name...");
+        log.info("MemberList has " + members.size() + " entries");
         Collections.sort(members);
         return members;
     }
@@ -56,5 +59,6 @@ public class MemberList implements Serializable{
     public void registerMember(Member member) throws Exception {
         log.info("Registering " + member.getName());
         members.add(member);
+        log.info("MemberList now has has " + members.size() + " entries after adding a new member");
     }
 }

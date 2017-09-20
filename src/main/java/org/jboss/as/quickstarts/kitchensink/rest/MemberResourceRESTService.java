@@ -88,11 +88,14 @@ public class MemberResourceRESTService {
     @Produces(MediaType.APPLICATION_JSON)
     public Response createMember(Member member) {
 
+        log.info("creating member");
+
         Response.ResponseBuilder builder = null;
 
         try {
             // Validates member using bean validation
             validateMember(member);
+            log.info("member valid");
 
             memberList.registerMember(member);
 
