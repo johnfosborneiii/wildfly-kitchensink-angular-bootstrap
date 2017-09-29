@@ -42,7 +42,6 @@ public class Member implements Serializable, Comparable<Member> {
 
     @Id
     @GeneratedValue
-    @XmlAttribute
     private Long id;
 
     @NotNull
