@@ -67,8 +67,7 @@ public class ServerDataRESTService {
               ipaddress = localhost.getHostAddress();
               return new JSONObject().put("IP", ipaddress).toString();
           } catch (Exception e) {
-              ipaddress = "UnknownHost";
-              return new JSONObject().put("IP", ipaddress).toString();
+              return new JSONObject().put("IP", "UnknownHost").toString();
           }
     }
 }
