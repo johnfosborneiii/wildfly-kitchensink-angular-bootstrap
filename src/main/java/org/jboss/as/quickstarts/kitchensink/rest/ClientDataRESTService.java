@@ -69,7 +69,7 @@ public class ClientDataRESTService {
         			   final String headerIdentifier = entry.getKey();
         			   final List<String> headerValues = entry.getValue();
 
-                 jsonHeadersToReturn.put(headerIdentifier, headerValues.getFirst());
+                 jsonHeadersToReturn.put(headerIdentifier, headerValues.get(0));
             }
             return jsonHeadersToReturn.toString();
     }
