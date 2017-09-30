@@ -53,13 +53,12 @@ public class ClientDataRESTService {
     @Inject
     private Logger log;
 
-    private final @Context HttpHeaders httpHeaders;
-
     @GET
     @Path("/headers")
     @Produces(MediaType.APPLICATION_JSON)
     public String getClientHeaders() {
 
+        private final @Context HttpHeaders httpHeaders;
         JSONObject jsonHeadersToReturn = new JSONObject();
 
         final MultivaluedMap<String, String> headerParams = httpHeaders.getRequestHeaders();
