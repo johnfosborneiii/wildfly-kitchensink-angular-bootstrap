@@ -61,8 +61,9 @@ public class ServerDataRESTService {
     public String getServerIP() {
 
           try {
-              InetAddress ip = InetAddress.getLocalHost();
-              String hostname = ip.getHostName();
+              InetAddress inet = InetAddress.getLocalHost();
+              String ip = inet.getHostAddress();
+              String hostname = inet.getHostName();
               JSONObject toReturn = new JSONObject();
               toReturn.put("ip", ip);
               toReturn.put("hostname", hostname);
