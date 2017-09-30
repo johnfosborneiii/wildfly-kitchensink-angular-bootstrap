@@ -60,14 +60,18 @@ public class ServerDataRESTService {
     @Produces(MediaType.APPLICATION_JSON)
     public String getServerIP() {
 
-          InetAddress localhost;
-          String ipaddress;
           try {
-              localhost = InetAddress.getLocalHost();
-              ipaddress = localhost.getHostAddress();
-              return new JSONObject().put("IP", ipaddress).toString();
+              InetAddress ip = InetAddress.getLocalHost();
+              String hostname = ip.getHostName();
+              JSONObject toReturn = new JSONObject();
+              toReturn.put("ip", ip);
+              toReturn.put("hostname", hostname);
+              return toReturn.toString();
           } catch (Exception e) {
-              return new JSONObject().put("IP", "UnknownHost").toString();
+              JSONObject toReturn = new JSONObject();
+              toReturn.put("ip", "Unknown");
+              toReturn.put("hostname", "Unknown");
+              return toReturn.toString();
           }
     }
 }
