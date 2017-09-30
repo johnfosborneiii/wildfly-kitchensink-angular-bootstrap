@@ -60,12 +60,15 @@ public class ServerDataRESTService {
     @Produces(MediaType.APPLICATION_JSON)
     public String getServerIP() {
 
-          InetAddress ip;
+          InetAddress localhost;
+          String ipaddress;
           try {
-              ip = InetAddress.getLocalHost();
-              return new JSONObject().put("IP", ip.getHostAddress());
+              localhost = InetAddress.getLocalHost();
+              ipaddress = localhost.getHostAddress();
+              return new JSONObject().put("IP", ipaddress);
           } catch (UnknownHostException e) {
-              return new JSONObject().put("IP", "UnknownHost");
+              ipaddress = "UnknownHost";
+              return new JSONObject().put("IP", ipaddress);
           }
     }
 }
