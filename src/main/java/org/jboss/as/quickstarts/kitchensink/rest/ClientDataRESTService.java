@@ -39,6 +39,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
+import javax.ws.rs.core.MultivaluedMap;
 
 /**
  * JAX-RS Example
@@ -69,7 +70,7 @@ public class ClientDataRESTService {
 
                  JSONArray headerValueArray = new JSONArray();
         			   for (final String headerValue : headerValues) {
-                       headerValueArray.put(headerValue);
+                       headerValueArray.put("headerValue", headerValue);
         			   }
                  jsonObj.put(headerIdentifier, headerValueArray);
 
