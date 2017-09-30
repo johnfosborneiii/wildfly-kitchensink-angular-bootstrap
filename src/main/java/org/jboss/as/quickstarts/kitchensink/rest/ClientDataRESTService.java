@@ -56,9 +56,8 @@ public class ClientDataRESTService {
     @GET
     @Path("/headers")
     @Produces(MediaType.APPLICATION_JSON)
-    public String getClientHeaders() {
+    public String getClientHeaders(@Context HttpHeaders httpHeaders) {
 
-        @Context HttpHeaders httpHeaders;
         JSONObject jsonHeadersToReturn = new JSONObject();
 
         final MultivaluedMap<String, String> headerParams = httpHeaders.getRequestHeaders();
