@@ -60,21 +60,24 @@ public class ClientDataRESTService {
     @Produces(MediaType.APPLICATION_JSON)
     public String getClientHeaders() {
 
+        JSONObject jsonHeadersToReturn = new JSONObject();
+
         final MultivaluedMap<String, String> headerParams = httpHeaders.getRequestHeaders();
-        JSONObject jsonObj = new JSONObject();
 
             for (final Map.Entry<String, List<String>> entry : headerParams.entrySet()) {
 
         			   final String headerIdentifier = entry.getKey();
         			   final List<String> headerValues = entry.getValue();
 
+                 JSONObject jsonObj = new JSONObject();
                  JSONArray headerValueArray = new JSONArray();
         			   for (final String headerValue : headerValues) {
-                       headerValueArray.put("headerValue", headerValue);
+                       jsonObj.put(headerIdentifier, headerValue);
         			   }
-                 jsonObj.put(headerIdentifier, headerValueArray);
+                 headerValueArray.put(jsonObj);
+                 jsonHeadersToReturn.put(headerIdentifier, headerValueArray);
 
             }
-            return jsonObj.toString();
+            return jsonHeadersToReturn.toString();
     }
 }
