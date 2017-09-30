@@ -17,6 +17,7 @@
 package org.jboss.as.quickstarts.kitchensink.rest;
 
 import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
 
 import java.util.HashMap;
 import java.util.HashSet;
